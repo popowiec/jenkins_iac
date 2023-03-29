@@ -12,7 +12,16 @@ instalation:
     - Jenkins is available on http://localhost
     - login: user
     - pass: bitnami
- 4. 
+ 4. in the "jenkins_jobs" folder we will create our jenskis iac projects:
+ 
+ The idea is to cretae jenkins projects and jobs based on folder structres in the root folder "jenkins_jobs":
+
+├── jenkins_jobs                    -> [configuration root path]
+│   ├── ProjectA                    -> [project/customer root path]
+│   │   ├── ModuleA                 -> [project/sub-project path]
+│   │   │   ├── JobA.jenkinsfile    -> [build/job path and config file]
+│   │   │   ├── JobB.jenkinsfile    -> [build/job path and config file]
+│   │   │   └── JobC.jenkinsfile    -> [build/job path and config file] 
 
 
 
