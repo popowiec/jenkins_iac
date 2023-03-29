@@ -46,6 +46,9 @@
 ![](img/job_dsl_build_steps_1.png)
 ![](img/job_dsl_build_steps_2.png)
 ![](img/job_dsl_build_steps_3.png)
+
+### [In-process Script Approval](https://www.jenkins.io/doc/book/managing/script-approval/)
+
 ![](img/job_dsl_build_steps_4.png)
 
 ### 9. Job DSL API reference
