@@ -48,7 +48,11 @@
 ![](img/job_dsl_build_steps_3.png)
 ![](img/job_dsl_build_steps_4.png)
 
-### 9. Jo DSL API reference
+### 9. Job DSL API reference
 ![](img/job_dsl_api_doc_1.png)
 ![](img/job_dsl_api_doc_2.png)
+
+### 10. Config Build steps to use groovy script file from repository:
+
+![](img/job_dsl_build_steps_5.png)
 
