@@ -37,4 +37,12 @@
 
 ![](img/job_dsl_create_iac_job.png)
 
-### 7. 
+### 7. Config SCM part of DSL job:
+
+![](img/job_dsl_scm_config.png)
+
+
+
+
+
+
