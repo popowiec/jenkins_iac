@@ -5,15 +5,15 @@ we will use the container jenkins prepared by [BITNAMI](https://bitnami.com/stac
 
 instalation:
 
- 1. Linux on WSL or EC2 with "tree" command installed
+ ###1. Linux on WSL or EC2 with "tree" command installed
     - check tree command: "tree -J ~" *(as a result you should see the json output with the folder and file structure)*
- 2. clone this repository
- 3. install Jenkins as docker container:
+ ###2. clone this repository
+ ###3. install Jenkins as docker container:
     - execute "docker compose up" or "docker compose up -d"
     - Jenkins is available on http://localhost
     - login: user
     - pass: bitnami
- 4. in the "jenkins_jobs" folder we will create our jenskis iac projects:
+ ###4. in the "jenkins_jobs" folder we will create our jenskis iac projects:
  
  The idea is to cretae jenkins projects and jobs based on folder structres in the root folder "jenkins_jobs":
  
@@ -26,10 +26,10 @@ instalation:
 │   │   │   └── JobC.jenkinsfile    -> [build/job path and config file] 
 ```
 
-5. install jenkins "Job DSL plugin"
+###5. install jenkins "Job DSL plugin"
 
 ![](img/job_dsl_plugin_install.png)
 
-6. creat first "DSL IAC" job:
+###6. creat first "DSL IAC" job:
 
 ![](img/job_dsl_create_iac_job.png)
