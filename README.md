@@ -26,4 +26,5 @@ instalation:
 │   │   │   └── JobC.jenkinsfile    -> [build/job path and config file] 
 ```
 
-
+5. install jenkins "Job DSL plugin"
+!(/img/job_dsl_plugin_install.png)
