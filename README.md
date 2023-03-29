@@ -8,7 +8,7 @@ instalation:
  1. Linux on WSL or EC2 with "tree" command installed
  2. clone this repository
  3. install Jenkins as docker container:
-    - execute "docker compose up" or "docker compose -d up"
+    - execute "docker compose up" or "docker compose up -d"
     - Jenkins is available on http://localhost
     - login: user
     - pass: bitnami
