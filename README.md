@@ -41,8 +41,11 @@
 
 ![](img/job_dsl_scm_config.png)
 
+### 8. Configure Build steps part for DSL job:
 
-
-
+![](img/job_dsl_build_steps_1.png)
+![](img/job_dsl_build_steps_2.png)
+![](img/job_dsl_build_steps_3.png)
+![](img/job_dsl_build_steps_4.png)
 
 
