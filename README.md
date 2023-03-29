@@ -6,7 +6,7 @@ we will use the container jenkins prepared by [BITNAMI](https://bitnami.com/stac
 instalation:
 
  1. Linux on WSL or EC2 with "tree" command installed
-    - check tree command: "tree -J ~" *as a result you should see the json output with the folder and file structure*
+    - check tree command: "tree -J ~" *(as a result you should see the json output with the folder and file structure)*
  2. clone this repository
  3. install Jenkins as docker container:
     - execute "docker compose up" or "docker compose up -d"
