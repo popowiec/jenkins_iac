@@ -1,7 +1,7 @@
 # jenkins_iac
 ***internal use for my colleagues***
 
-### we will use the container jenkins prepared by [BITNAMI](https://bitnami.com/stack/jenkins/containers)
+> we will use the container jenkins prepared by [BITNAMI](https://bitnami.com/stack/jenkins/containers)
 
  ### 1. Linux on WSL or EC2 with "tree" command installed
     - check tree command: "tree -J ~" *(as a result you should see the json output with the folder and file structure)*
