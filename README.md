@@ -5,9 +5,14 @@ we will use the container jenkins prepared by [BITNAMI](https://bitnami.com/stac
 
 instalation:
 
- 1. clone the repo
- 2. execute "docker compose up"
- 3.
+ 1. Linux on WSL or EC2 with "tree" command installed
+ 2. clone this repository
+ 3. install Jenkins as docker container:
+    - execute "docker compose up" or "docker compose -d up"
+    - Jenkins is available on http://localhost
+    - login: user
+    - pass: bitnami
+ 4. 
 
 
 
