@@ -53,6 +53,7 @@
 ![](img/job_dsl_api_doc_2.png)
 
 ### 10. Config Build steps to use groovy script file from repository:
+> ***remeber Aprove the script in Manage Jenkins***
 
 ![](img/job_dsl_build_steps_5.png)
 
