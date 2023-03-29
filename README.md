@@ -16,7 +16,7 @@
     - Jenkins is available on http://localhost
     - login: user
     - pass: bitnami
- ### 4. in the "jenkins_jobs" folder we will create our jenskis iac projects:
+ ### 4. In the "jenkins_jobs" folder we will create our jenskis iac projects:
  
  The idea is to cretae jenkins projects and jobs based on folder structres in the root folder "jenkins_jobs":
  
@@ -29,10 +29,12 @@
 │   │   │   └── JobC.jenkinsfile    -> [build/job path and config file] 
 ```
 
-### 5. install jenkins "Job DSL plugin"
+### 5. Install jenkins "Job DSL plugin" and "Git plugin" 
 
 ![](img/job_dsl_plugin_install.png)
 
-### 6. creat first "DSL IAC" job:
+### 6. Create first "DSL IAC" job:
 
 ![](img/job_dsl_create_iac_job.png)
+
+### 7. 
