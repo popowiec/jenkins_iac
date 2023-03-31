@@ -3,7 +3,7 @@
 > ***internal use for my colleagues*** -
 > we will use the container jenkins prepared by [BITNAMI](https://bitnami.com/stack/jenkins/containers)
 
-
+> install docker [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
 
  ### 1. Linux on WSL or EC2 with "tree" command installed
     - check tree command: "tree -J ~" *(as a result you should see the json output with the folder and file structure)*
