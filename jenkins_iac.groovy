@@ -78,10 +78,10 @@ def dslBuildProject(jsonProjectStruct, rootFolderPath) {
     }
 
     // build jobs
-    if (jsonProjectStruct.type == "file") {
-        def jobName = jsonProjectStruct.name =~ /(.*)\.jenkinsfile/
-        dslBuildJob(rootFolderPath.join('/'), jobName[0][1])
-    }
+    // if (jsonProjectStruct.type == "file") {
+    //     def jobName = jsonProjectStruct.name =~ /(.*)\.jenkinsfile/
+    //     dslBuildJob(rootFolderPath.join('/'), jobName[0][1])
+    // }
 
     return "Completion of project building: ${localFolderPath.join('/')}"
 }
