@@ -14,4 +14,4 @@ def getJsonConfigTree(command) {
 
 def jsonProjectsStruct = getJsonConfigTree(tree_command)
 
-// println getJsonConfigTree(tree_command)
+println jsonProjectsStruct
