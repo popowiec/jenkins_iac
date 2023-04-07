@@ -32,6 +32,37 @@ def dslBuildFolder(folderPath, folderProject) {
     }
 }
 
+//Jenkins DSL language - create job in jenkins
+def dslBuildJob(jobPath, jobName) {
+
+    pipelineJob("$jobPath/$jobName") {
+        logRotator {
+            numToKeep(30)
+        }
+        concurrentBuild(false)
+        definition {
+            cpsScm {
+
+                scm {
+                    git{
+
+                        remote{
+                            url('https://my_repo')
+                            credentials('my_credentials')
+                        }
+
+                        branch('*/main')
+                    }
+                }
+
+                lightweight(true)
+
+                scriptPath('jenkinsfiles/my_app_dev.jenkinsfile')
+            }
+        }        
+    }
+}
+
 //recursive function to build nested folder and job structure
 def dslBuildProject(jsonProjectStruct, rootFolderPath) {
     def localFolderPath = rootFolderPath.clone()
