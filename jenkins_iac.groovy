@@ -60,7 +60,7 @@ def dslBuildJob(jobPath, jobName) {
 
                 lightweight(true)
 
-                scriptPath("$config_root_path/$jobPath/$jobName.jenkinsfile")
+                scriptPath("${WORKSPACE}/jenkins_jobs/$jobPath/$jobName.jenkinsfile")
             }
         }        
     }
