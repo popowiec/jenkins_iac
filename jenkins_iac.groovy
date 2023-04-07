@@ -39,7 +39,7 @@ def dslBuildJob(jobPath, jobName) {
         logRotator {
             numToKeep(30)
         }
-        // concurrentBuild(false)
+
         definition {
             cpsScm {
 
@@ -79,8 +79,7 @@ def dslBuildProject(jsonProjectStruct, rootFolderPath) {
 
     // build jobs
     if (jsonProjectStruct.type == "file") {
-        // def jobName = jsonProjectStruct.name =~ /(.*)\.jenkinsfile/
-        def jobName = jsonProjectStruct.name =~ /jenkinsfile/
+        def jobName = jsonProjectStruct.name =~ /(.*)\.jenkinsfile/
         dslBuildJob(rootFolderPath.join('/'), jobName[0][1])
     }
 
