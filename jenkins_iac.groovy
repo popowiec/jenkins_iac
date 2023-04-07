@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 
 //configuration root path
-def config_root_path = "${WORKSPACE}/jenkins_job"
+def config_root_path = "${WORKSPACE}/jenkins_jobs"
 
 //linux tree command
 def tree_command = "tree -J ${config_root_path}"
