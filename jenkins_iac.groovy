@@ -35,6 +35,9 @@ def dslBuildFolder(folderPath, folderProject) {
 //Jenkins DSL language - create job in jenkins
 def dslBuildJob(jobPath, jobName) {
 
+    println "=================================="
+    println "$jobPath"
+
     pipelineJob("$jobPath/$jobName") {
         logRotator {
             numToKeep(30)
@@ -47,7 +50,7 @@ def dslBuildJob(jobPath, jobName) {
                     git{
 
                         remote{
-                            url('https://my_repo')
+                            url('https://github.com/popowiec/jenkins_iac.git')
                             // credentials('my_credentials')
                         }
 
