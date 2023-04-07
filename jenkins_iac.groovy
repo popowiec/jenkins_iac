@@ -19,7 +19,7 @@ for (jsonProjectStruct in jsonProjectsStruct[0].contents) {
     
     println dslBuildProject(jsonProjectStruct, [])
 
-    // println dslBuildView(jsonProjectStruct)
+    println dslBuildView(jsonProjectStruct)
 }
 
 //Jenkins DSL language - create folder in jenkins
@@ -33,35 +33,35 @@ def dslBuildFolder(folderPath, folderProject) {
 }
 
 //Jenkins DSL language - create job in jenkins
-// def dslBuildJob(jobPath, jobName) {
+def dslBuildJob(jobPath, jobName) {
 
-//     pipelineJob("$jobPath/$jobName") {
-//         logRotator {
-//             numToKeep(30)
-//         }
-//         concurrentBuild(false)
-//         definition {
-//             cpsScm {
+    pipelineJob("$jobPath/$jobName") {
+        logRotator {
+            numToKeep(30)
+        }
+        concurrentBuild(false)
+        definition {
+            cpsScm {
 
-//                 scm {
-//                     git{
+                scm {
+                    git{
 
-//                         remote{
-//                             url('https://my_repo')
-//                             credentials('my_credentials')
-//                         }
+                        remote{
+                            url('https://my_repo')
+                            credentials('my_credentials')
+                        }
 
-//                         branch('*/main')
-//                     }
-//                 }
+                        branch('*/main')
+                    }
+                }
 
-//                 lightweight(true)
+                lightweight(true)
 
-//                 scriptPath('jenkinsfiles/my_app_dev.jenkinsfile')
-//             }
-//         }        
-//     }
-// }
+                scriptPath('jenkinsfiles/my_app_dev.jenkinsfile')
+            }
+        }        
+    }
+}
 
 //recursive function to build nested folder and job structure
 def dslBuildProject(jsonProjectStruct, rootFolderPath) {
@@ -78,14 +78,37 @@ def dslBuildProject(jsonProjectStruct, rootFolderPath) {
     }
 
     // build jobs
-    // if (jsonProjectStruct.type == "file") {
-    //     def jobName = jsonProjectStruct.name =~ /(.*)\.jenkinsfile/
-    //     dslBuildJob(rootFolderPath.join('/'), jobName[0][1])
-    // }
+    if (jsonProjectStruct.type == "file") {
+        def jobName = jsonProjectStruct.name =~ /(.*)\.jenkinsfile/
+        dslBuildJob(rootFolderPath.join('/'), jobName[0][1])
+    }
 
     return "Completion of project building: ${localFolderPath.join('/')}"
 }
 
+//function to build neted views
+def dslBuildView(jsonProjectStruct) {
 
+    listView(jsonProjectStruct.name) {
+        description(jsonProjectStruct.info)
+        recurse(true)
+        jobs {
+            for (jobName in jsonProjectStruct.contents) {
+                if (jsonProjectStruct.type == "directory") {
+                    name("${jsonProjectStruct.name}/${jobName.name}")
+                }
+            }
+        }
+        columns {
+            status()
+            weather()
+            name()
+            lastSuccess()
+            lastFailure()
+            lastDuration()
+            buildButton()
+        }
+    }
 
-println jsonProjectsStruct
+    return "Completion of views building: ${jsonProjectStruct.name}"
+}
