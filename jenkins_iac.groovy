@@ -12,5 +12,6 @@ def getJsonConfigTree(command) {
     return new JsonSlurper().parseText(tree)
 }
 
+def jsonProjectsStruct = getJsonConfigTree(tree_command)
 
-println getJsonConfigTree(tree_command)
+// println getJsonConfigTree(tree_command)
