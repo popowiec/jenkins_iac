@@ -48,7 +48,7 @@ def dslBuildJob(jobPath, jobName) {
 
                         remote{
                             url('https://my_repo')
-                            credentials('my_credentials')
+                            // credentials('my_credentials')
                         }
 
                         branch('*/main')
@@ -57,7 +57,7 @@ def dslBuildJob(jobPath, jobName) {
 
                 lightweight(true)
 
-                scriptPath('jenkinsfiles/my_app_dev.jenkinsfile')
+                // scriptPath('jenkinsfiles/my_app_dev.jenkinsfile')
             }
         }        
     }
