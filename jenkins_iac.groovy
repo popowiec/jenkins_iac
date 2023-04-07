@@ -39,7 +39,7 @@ def dslBuildJob(jobPath, jobName) {
         logRotator {
             numToKeep(30)
         }
-        concurrentBuild(false)
+        // concurrentBuild(false)
         definition {
             cpsScm {
 
