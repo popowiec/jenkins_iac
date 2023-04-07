@@ -22,6 +22,15 @@ for (jsonProjectStruct in jsonProjectsStruct[0].contents) {
     // println dslBuildView(jsonProjectStruct)
 }
 
+//Jenkins DSL language - create folder in jenkins
+def dslBuildFolder(folderPath, folderProject) {
+    folderProject.info = (folderProject.info) ?: folderProject.name
+
+    folder(folderPath){
+        displayName(folderProject.info)
+        description(folderProject.info)
+    }
+}
 
 //recursive function to build nested folder and job structure
 def dslBuildProject(jsonProjectStruct, rootFolderPath) {
