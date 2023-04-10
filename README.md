@@ -5,17 +5,23 @@
 
 > install docker [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
 
- ### 1. Linux on WSL or EC2 with "tree" command installed
-    - check tree command: "tree -J ~" *(as a result you should see the json output with the folder and file structure)*
- ### 2. clone this repository
+ ### 1. clone this repository
  ```
  https://github.com/popowiec/jenkins_iac.git
  ```
- ### 3. install Jenkins as docker container:
+ ### 2. install Jenkins as docker container:
     - execute "docker compose up" or "docker compose up -d"
     - Jenkins is available on http://localhost
     - login: user
     - pass: bitnami
+    
+ ### 3. install "tree" command inside the jenkins conatainer    
+    - docker ps
+    - docker exec -u root -it <container> /bin/bash
+    - apt-get update
+    - apt-get install tree
+    - check tree command: "tree -J ~" *(as a result you should see the json output with the folder and file structure)*
+
  ### 4. In the "jenkins_jobs" folder we will create our jenskis iac projects:
  
  The idea is to cretae jenkins projects and jobs based on folder structres in the root folder "jenkins_jobs":
