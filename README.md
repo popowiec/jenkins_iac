@@ -29,7 +29,7 @@
 │   │   │   └── JobC.jenkinsfile    -> [build/job path and config file] 
 ```
 
-### 5. Install jenkins "Job DSL plugin" and "Git plugin" 
+### 5. Install jenkins "Job DSL plugin" and "Git plugin" and "Pipeline Declarative"
 
 ![](img/job_dsl_plugin_install.png)
 
